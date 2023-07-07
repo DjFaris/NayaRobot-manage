@@ -1,4 +1,4 @@
-import random
+""" import random
 from random import choice
 
 from pyrogram import *
@@ -163,7 +163,7 @@ async def _(_, message):
 
 
 __MODULE__ = "Asupan"
-__HELP__ = f"""
+__HELP__ = f
 /asupan - Untuk mengirim video asupan random. 
 
 /cewe - Untuk mengirim photo cewek random.
