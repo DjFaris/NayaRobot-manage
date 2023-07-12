@@ -91,7 +91,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
             InlineKeyboardButton(text="Perintah ❓", callback_data="bot_commands"),
             InlineKeyboardButton(
                 text="Jasa BOT",
-                callback_data="rito_jasa",
+                link="httls://t.me/jasa_kirito/155"
             ),
         ],
         [
@@ -124,7 +124,7 @@ keyboard = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="Jasa BOT",
-                callback_data="rito_jasa",
+                url="https://t.me/jasa_kirito/155"
             ),
         ],
         [
@@ -323,7 +323,7 @@ if __name__ == "__main__":
             loop.run_until_complete(start_bot())
         loop.run_until_complete(asyncio.sleep(3.0))  # task cancel wait
 
-
+"""
 def help_about_callback(update, context):
     query = update.callback_query
     if query.data == "rito_jasa":
