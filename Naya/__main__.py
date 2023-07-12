@@ -91,7 +91,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
             InlineKeyboardButton(text="Perintah ❓", callback_data="bot_commands"),
             InlineKeyboardButton(
                 text="Jasa BOT",
-                link="httls://t.me/jasa_kirito/155"
+                url="httls://t.me/jasa_kirito/155"
             ),
         ],
         [
