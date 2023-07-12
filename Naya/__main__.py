@@ -91,7 +91,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
             InlineKeyboardButton(text="Perintah ❓", callback_data="bot_commands"),
             InlineKeyboardButton(
                 text="Jasa BOT",
-                url="httls://t.me/jasa_kirito/155",
+                url="https://t.me/jasa_kirito",
             ),
         ],
         [
@@ -124,7 +124,7 @@ keyboard = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="Jasa BOT",
-                url="https://t.me/jasa_kirito/155",
+                url="https://t.me/jasa_kirito",
             ),
         ],
         [
@@ -322,4 +322,3 @@ if __name__ == "__main__":
         with suppress(asyncio.exceptions.CancelledError):
             loop.run_until_complete(start_bot())
         loop.run_until_complete(asyncio.sleep(3.0))  # task cancel wait
-
