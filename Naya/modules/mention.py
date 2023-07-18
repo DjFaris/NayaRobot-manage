@@ -29,7 +29,7 @@ async def everyone(_, message):
         await message.reply("-› Saya sudah mengerjakan jumlah maksimum 500 obrolan saat ini. Coba sebentar lagi.")
       else:  
         if message.chat.id in chatQueue:
-          await message.reply("-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan / stop untuk memulai yang baru.")
+          await message.reply("-› Sudah ada proses yang sedang berlangsung dalam obrolan ini. Silakan /cancel untuk memulai yang baru.")
         else:  
           chatQueue.append(message.chat.id)
           if message.reply_to_message:
@@ -81,7 +81,7 @@ async def everyone(_, message):
   except FloodWait as e:
     await asyncio.sleep(e.value)                    
         
-@app.on_message(filters.command(["stop","cancel"]))
+@app.on_message(filters.command(["cancel"]))
 @adminsOnly("can_change_info")
 async def stop(_, message):
   global stopProcess
@@ -106,5 +106,5 @@ async def stop(_, message):
 __MODULE__ = "Tag All"
 __HELP__ = f"""
 /all atau @all [balas pesan/berikan pesan] - Tandai semua anggota dengan pesan atau tanpa pesan.
-/cancel atau /stop - Untuk membatalkan proses tagall.
+/cancel - Untuk membatalkan proses tagall.
 """
