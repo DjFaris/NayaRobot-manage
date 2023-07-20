@@ -107,4 +107,4 @@ __MODULE__ = "Tag All"
 __HELP__ = f"""
 /all atau @all [balas pesan/berikan pesan] - Tandai semua anggota dengan pesan atau tanpa pesan.
 /cancel - Untuk membatalkan proses tagall.
-""
+"""
