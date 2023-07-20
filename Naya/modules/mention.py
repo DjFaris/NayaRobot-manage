@@ -1,4 +1,4 @@
-from pyrogram import filters
+
 
 from pyrogram.types import Message
 import os
@@ -14,7 +14,7 @@ chatQueue = []
 
 stopProcess = False
 
-@app.on_message(filters.command(["tagall","mentionall","all","mention"], ["/", "@"]))
+@app.on_message(filters.command(["tagall","all"], ["/", "@"]))
 @adminsOnly("can_change_info")
 async def everyone(_, message):
   global stopProcess
@@ -25,7 +25,7 @@ async def everyone(_, message):
     except:
       has_permissions = message.sender_chat  
     if has_permissions:
-      if len(chatQueue) > 500:
+      if len(chatQueue) > 100:
         await message.reply("-› Saya sudah mengerjakan jumlah maksimum 500 obrolan saat ini. Coba sebentar lagi.")
       else:  
         if message.chat.id in chatQueue:
@@ -107,4 +107,4 @@ __MODULE__ = "Tag All"
 __HELP__ = f"""
 /all atau @all [balas pesan/berikan pesan] - Tandai semua anggota dengan pesan atau tanpa pesan.
 /cancel - Untuk membatalkan proses tagall.
-"""
+""
