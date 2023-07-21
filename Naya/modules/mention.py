@@ -1,5 +1,5 @@
 
-"""
+
 from pyrogram.types import Message
 import os
 import asyncio 
@@ -104,7 +104,7 @@ async def stop(_, message):
 
 
 __MODULE__ = "Tag All"
-__HELP__ = f
+__HELP__ = f"""
 /all atau @all [balas pesan/berikan pesan] - Tandai semua anggota dengan pesan atau tanpa pesan.
 /cancel - Untuk membatalkan proses tagall.
 """
